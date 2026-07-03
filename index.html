@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пятнашки</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Пятнашки</h1>
+      <p class="subtitle">Расставьте плитки от 1 до 15 по порядку</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Ходы</span>
+        <span class="stat-value" id="moves">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Время</span>
+        <span class="stat-value" id="timer">0:00</span>
+      </div>
+    </div>
+
+    <div class="board-wrapper">
+      <div class="board" id="board" role="grid" aria-label="Игровое поле пятнашек"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-primary" id="new-game">Новая игра</button>
+      <button class="btn btn-secondary" id="shuffle">Перемешать</button>
+    </div>
+
+    <div class="win-overlay hidden" id="win-overlay">
+      <div class="win-card">
+        <div class="win-icon">🎉</div>
+        <h2>Победа!</h2>
+        <p id="win-stats"></p>
+        <button class="btn btn-primary" id="play-again">Играть снова</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
